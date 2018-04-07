@@ -1,0 +1,9 @@
+<div class="hack">
+	<ul>
+	<li ng-repeat="item in ctrl.foundItems">
+		Name: {{ item.name }}, Price: {{ item.price_large }}
+		<button ng-click="ctrl.onRemove({index: $index});">Remove it</button>
+	</li>
+	</ul>
+</div>
+<div class="error" ng-if="!ctrl.checkEmptyList()">Nothing found!</div>
