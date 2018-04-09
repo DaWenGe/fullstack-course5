@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="src/style.css">
 	<title>Assignment 4</title>
 </head>
 <body ng-app="MenuApp">
 
+	<h1>Assignment 4</h1>
+
 	<div>
-		<a ui-sref="categories">Categories</a>
-		<a ui-sref="items">Items</a>
+		<a ui-sref="categories" ui-sref-active="activeTab">Categories</a>
+		<a ui-sref="items" ui-sref-active="activeTab">Items</a>
 	</div>
 
 	<ui-view></ui-view>
@@ -19,6 +22,9 @@
 	<!-- Module -->
 	<script src="src/menuapp.module.js"></script>
 	<script src="src/data.module.js"></script>
+
+	<!-- Routes -->
+	<script src="src/routes.js"></script>
 
 	<!-- Artifacts -->
 	<script src="src/menudata.service.js"></script>
