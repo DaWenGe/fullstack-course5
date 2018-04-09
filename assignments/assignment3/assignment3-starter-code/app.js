@@ -61,7 +61,7 @@ function MenuSearchService ($http, MenuItemsPath) {
 	service.getMatchedMenuItems = function (searchTerm) {
 		return $http({
 			method: 'GET',
-			url: MenuItemsPath,
+			url: MenuItemsPath
 		})
 		.then(function (response) {
 			var foundItems = [];
