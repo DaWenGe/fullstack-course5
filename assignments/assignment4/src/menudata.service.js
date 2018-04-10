@@ -11,7 +11,6 @@ function MenuDataService ($http, CategoryPath, MenuItemsPath) {
 	var service = this;
 
 	service.getAllCategories = function () {
-		console.log('HERE!');
 		return $http({
 			method: 'GET',
 			url: CategoryPath
@@ -21,7 +20,7 @@ function MenuDataService ($http, CategoryPath, MenuItemsPath) {
 	service.getItemsForCategory = function (categoryShortName) {
 		return $http({
 			method: 'GET',
-			url: MenuItemsPath
+			url: (MenuItemsPath + categoryShortName)
 		});
 	};
 }
